@@ -12,7 +12,7 @@ export default function Home() {
 
 
   async function apiCall() {
-    const response = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=HxvPPMuO3eckigvtvFmVbaLLzgscBJlh&&limit=10");
+    const response = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=GlVGYHkr3WSBnllca54iNt0yFbjz7L65&&limit=10");
     const obj = await response.json();
     const urls = obj['data'].map((item) => {
       return item.images.original.url;
@@ -32,7 +32,7 @@ export default function Home() {
     if (param === '') {
       param = 'Trending';
     }
-    var query = `https://api.giphy.com/v1/gifs/search?api_key=HxvPPMuO3eckigvtvFmVbaLLzgscBJlh&&limit=10&&q=${encodeURIComponent(param)}`;
+    var query = `https://api.giphy.com/v1/gifs/search?api_key=GlVGYHkr3WSBnllca54iNt0yFbjz7L65&&limit=10&&q=${encodeURIComponent(param)}`;
     console.log(query)
     const response = await fetch(query);
     const obj = await response.json();
